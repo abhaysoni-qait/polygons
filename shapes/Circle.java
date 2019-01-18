@@ -4,6 +4,10 @@ import java.util.InputMismatchException;
 
 import interfaces.Polygons;
 
+
+/*
+ * Shape circle 
+ */
 public class Circle implements Polygons{
 	
 	private double radius;

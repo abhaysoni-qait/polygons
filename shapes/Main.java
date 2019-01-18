@@ -8,8 +8,11 @@ import interfaces.Polygons;
 
 //question1 : should we write break in switch when using return statement
 
-
+// Entry point our program we can control the flow of the program from here
 public class Main {
+	
+	// created static scanner so we dont have to craete a new scanner
+	// everytime we need an input
 	public static Scanner scan;
 	
 	private static void init() {
@@ -27,15 +30,22 @@ public class Main {
 		int choice = selectShape();
 		Polygons shape = setShapeParameters(choice);
 		
-		if(shape!=null) {
+		//checking if we received any shape or not for safety
+		if(shape!=null) { 
 			System.out.println("Area of the Selected Shape : " + shape.getArea());
 		}
 		
 		System.out.println("Program Ended");
+		
+		//closing scanner Good Practice
 		close();
 		
 	}
 		
+	
+	/*
+	 * select the Required Shape from the list of shape Available
+	 */
 	
 	private static int selectShape() {
 		
@@ -63,6 +73,10 @@ public class Main {
 		
 		return choice;
 	}
+	
+	/*
+	 * set the paramters of the selected shape
+	 */
 	
 	private static Polygons setShapeParameters(int choice) {
 		
@@ -96,7 +110,9 @@ public class Main {
 		return shape;
 	}
 	
-	
+	/*
+	 * get the area of the shape that you selected 
+	 */
 	private static double getShapeArea(Polygons shape) {
 		return shape.getArea();
 	}
