@@ -5,9 +5,6 @@ import java.util.Scanner;
 
 import interfaces.Polygons;
 
-
-//question1 : should we write break in switch when using return statement
-
 // Entry point our program we can control the flow of the program from here
 public class Main {
 	
